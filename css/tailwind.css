@@ -1,0 +1,274 @@
+@tailwind base;
+@tailwind components;
+
+#site-header {
+  color-scheme: only dark;
+}
+
+@tailwind utilities;
+
+.task-list-item::before {
+  @apply hidden;
+}
+
+.task-list-item {
+  @apply list-none;
+}
+
+.footnotes {
+  @apply mt-12 border-t border-gray-200 pt-8 dark:border-gray-700;
+}
+
+.data-footnote-backref {
+  @apply no-underline;
+}
+
+.csl-entry {
+  @apply my-5;
+}
+
+/* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition:
+    background-color 600000s 0s,
+    color 600000s 0s;
+}
+
+.katex-display {
+  overflow: auto hidden;
+}
+
+#site-content p, 
+#site-content li {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.light #site-content a {
+  @apply border-b border-dvText border-dashed;
+}
+
+.light #site-content a:hover {
+  @apply text-dvHeaderBorder border-b border-dvHeaderBorder border-solid;
+}
+
+.dark #site-content a {
+  @apply border-b border-gray-100 border-dashed;
+}
+
+.dark #site-content a:hover {
+  @apply border-b border-dvHeaderBorder border-solid;
+}
+
+#site-content a.home-button {
+  @apply border-none text-dvText bg-dvBisque hover:text-gray-100 hover:bg-dvOrangeGold1 hover:border-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg px-5 py-2.5 focus:outline-none dark:focus:ring-blue-800
+}
+
+#site-content h1+p,
+#site-content h2+p,
+#site-content h3+p,
+#site-content h4+p,
+#site-content h1+div,
+#site-content h2+div,
+#site-content h3+div,
+#site-content h4+div {
+  margin-top: 2.5rem;
+}
+
+h2 {
+  @apply text-headings dark:text-gray-100 text-2xl sm:text-3xl md:text-4xl font-serif text-center pb-4 mb-2 italic
+}
+
+h3 {
+  @apply text-dvOrangeGold1 dark:text-dvBisque text-base sm:text-md md:text-lg lg:text-xl font-serif text-center italic font-bold
+}
+
+h4 {
+  @apply text-headings dark:text-gray-100 text-center text-base sm:text-sm md:text-md lg:text-lg font-serif italic
+}
+
+
+.home h2 {
+  @apply text-headings dark:text-gray-100 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-center border-solid border-b-4 border-dvHeaderBorder pb-4 mb-2 not-italic
+}
+
+.home h2.special {
+  @apply text-headings dark:text-gray-100 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif italic text-center border-solid border-b-4 border-dvHeaderBorder pb-4 mb-6
+}
+
+
+.home h3 {
+  @apply text-dvOrangeGold1 dark:text-dvBisque text-base sm:text-md md:text-lg lg:text-xl font-serif text-center italic font-bold mb-16
+}
+
+.home h4 {
+  @apply text-headings dark:text-gray-100 text-center text-base sm:text-sm md:text-md lg:text-lg font-serif italic
+}
+
+.light #home-projects a {
+  @apply border-none;
+}
+
+.light #home-projects a:hover {
+  @apply text-gray-100 border-none;
+}
+
+.home .section-container {
+  margin-bottom: 3rem;
+}
+
+.home-button {
+  width: fit-content;
+  display: inline-block;
+}
+
+.home #home-product-development {
+  border-top: solid #e5c27e;
+  border-top-width: 12px;
+  padding-top: 1.5rem;
+}
+
+.home #home-product-development .home-product-hero {
+  background-image: url('/static/images/home/08_1_FONDO_dan_artesana_jam_new.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  min-height: 556px;
+  padding-left: 0;
+  position: relative;
+}
+
+.home #home-product-development .home-product-hero-text {
+  background: #e5c27e;
+  background: linear-gradient(90deg, #e5c27e 0%, #e5c27e 93%, rgba(250,250,250,0) 100%);  
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-right: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  top: 0;
+  width: 50%;
+  @apply pl-4 md:pl-6
+}
+
+@media screen and (min-width:768px) {
+  .home #home-product-development .home-product-hero {
+    background-size: contain;
+    background-position: right;
+  }  
+}
+
+.home #home-training .home-training-hero {
+  background-image: url('/static/images/home/010_FONDO_dani_c_afganas.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  min-height: 817px;
+  padding-right: 0;
+  position: relative;
+  z-index: 0;
+}
+
+.home #home-training .home-training-hero::after {
+  background: rgba(247, 230, 191, 0.65);
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.home #home-training .home-training-hero-text {
+  background: rgba(247, 230, 191, 1);
+  background: linear-gradient(to left, rgba(247, 230, 191, 1) 0%, rgba(247, 230, 191, 1) 95%, rgba(250,250,250,0) 100%);
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  top: 0;
+  width: 50%;
+  z-index: 2;
+  @apply pr-4 md:pr-6
+}
+
+.home #home-training .home-training-hero-text h2 {
+  @apply border-none;
+}
+
+@media screen and (min-width:768px) {
+  .home #home-training .home-training-hero {
+    background-size: cover;
+    background-position: left;
+  }  
+}
+
+.home #home-training {
+  border-top: 12px #e5c27e solid;
+}
+
+.home #home-projects {
+  margin-bottom: 0;
+}
+
+.home #home-projects p {
+  text-align: center;
+}
+
+.other-projects h2 {
+  @apply border-none italic mt-8;
+}
+
+.other-projects a {
+  display: block;
+  margin: 0 auto;
+}
+
+.other-projects p {
+  text-align: justify;
+}
+
+.home #home-consulting .home-consulting-hero {
+  background-image: url('/static/images/home/2_FOTO_FINAL_3_CLA fin.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  min-height: 567px;
+  padding-left: 0;
+  position: relative;
+}
+
+.home #home-consulting .home-consulting-hero-text {
+  background: #f6f3e4;
+  background: linear-gradient(90deg, #f6f3e4  0%, #f6f3e4 5%, rgba(250,250,250,0) 100%);
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  top: 0;
+  width: 50%;
+  z-index: 2;
+  @apply pr-4 md:pr-6
+}
+
+#home-consulting {
+  margin-bottom: 0;
+}
