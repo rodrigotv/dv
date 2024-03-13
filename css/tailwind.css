@@ -99,7 +99,7 @@ h4 {
 
 
 .home h3 {
-  @apply text-dvOrangeGold1 dark:text-dvBisque text-base sm:text-md md:text-lg lg:text-xl font-serif text-center italic font-bold mb-16
+  @apply text-dvOrangeGold1 dark:text-dvBisque text-base sm:text-md md:text-lg lg:text-xl font-serif text-center italic font-bold mb-0
 }
 
 .home h4 {

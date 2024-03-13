@@ -8,7 +8,7 @@ import pic_5 from '/public/static/images/home/07_exhibit_belize.jpg'
 
 const StatBox = () => {
   return (
-    <div className="grid grid-cols-1 grid-rows-12 md:grid-cols-2 md:grid-rows-6 lg:grid-cols-5 lg:grid-rows-3 gap-4 p-4 place-items-center items-center text-[26px] md:text-[24px] lg:text-[16px] text-center italic">
+    <div className="grid grid-cols-1 grid-rows-10 md:grid-cols-2 md:grid-rows-5 lg:grid-cols-5 lg:grid-rows-2 gap-4 p-4 place-items-center items-center text-[26px] md:text-[24px] lg:text-[16px] text-center italic">
       <div className="max-w-[481px] aspect-square overflow-hidden md:order-1 lg:order-none">
         <Image
           src={pic_1} 
@@ -17,7 +17,7 @@ const StatBox = () => {
         />
       </div>
       <div className="max-w-[481px] flex flex-col justify-center aspect-square text-dvBlue1 dark:text-gray-100 overflow-hidden md:order-2 lg:order-none">
-        <span className="block w-full text-[64px] lg:text-[40px]">25</span> years of experience working in product design and businesses strategy for the Handcraft Sector
+        <span className="block w-full text-[64px] lg:text-[40px]">25</span> years of experience in the Handcraft Sector
       </div>
       <div className="max-w-[481px] aspect-square overflow-hidden md:order-4 lg:order-none">
         <Image
@@ -27,7 +27,7 @@ const StatBox = () => {
         />
       </div>
       <div className="max-w-[481px] flex flex-col justify-center aspect-square text-dvBlue1 dark:text-gray-100 overflow-hidden md:order-3 lg:order-none">
-        Nearly <span className="block w-full text-[64px] lg:text-[40px]">3,500</span> artisans from groups, associations and projects have been benefited from her sales model
+        Nearly <span className="block w-full text-[64px] lg:text-[40px]">3,500</span> artisans benefited from her designs and sales model
       </div>
       <div className="max-w-[481px] aspect-square overflow-hidden md:order-5 lg:order-none">
         <Image
@@ -37,7 +37,7 @@ const StatBox = () => {
         />
       </div>
       <div className="max-w-[481px] flex flex-col justify-center aspect-square text-dvPurple4 dark:text-gray-100 overflow-hidden md:order-6 lg:order-none">
-        Nearly <span className="block w-full text-[64px] lg:text-[40px]">2,200</span> artisans and program implementers have received direct training from Daniela
+        Nearly <span className="block w-full text-[64px] lg:text-[40px]">2,200</span> artisans and program implementers trained
       </div>
       <div className="max-w-[481px] aspect-square overflow-hidden md:order-8 lg:order-none">
         <Image
@@ -58,12 +58,6 @@ const StatBox = () => {
       </div>
       <div className="max-w-[481px] flex flex-col justify-center aspect-square text-dvPurple4 dark:text-gray-100 overflow-hidden md:order-10 lg:order-none">
       <span className="block w-full text-[64px] lg:text-[40px]">40+</span> Consulting Projects in the Handcraft Sector and other SMEs initiatives
-      </div>
-      <div className="max-w-[481px] flex flex-col justify-center aspect-square text-dvBisque bg-dvPurple4 lg:text-dvBlue1 lg:bg-transparent overflow-hidden md:order-12 lg:order-none lg:col-start-2">
-        Has been a pioneer in design, cultural research, training, product development and high-end retail business in her country.
-      </div>
-      <div className="max-w-[481px] flex flex-col justify-center aspect-square text-dvPurple4 dark:text-gray-100 overflow-hidden md:order-11 lg:order-none lg:col-start-4">
-        Created a dynamic methodology adapted to the reality of adult program participants who never received formal education
       </div>
     </div>
   )

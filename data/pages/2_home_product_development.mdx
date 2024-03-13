@@ -21,10 +21,35 @@ date: '2024-02-17'
 </DivContainer>
 </div>
 <DivContainer classAddition="flex flex-col items-center">
-<Image
-  src="/static/images/home/0812_composicion.jpg"
-  alt="Cultural preservation through product design and development"
-  width="991"
-  height="1715"
+<Gallery
+  grid={{
+    className: 'grid-cols-1 gap-0',
+  }} 
+  pictures={
+    [
+      {
+        id: 1,
+        path: 'home/08_FONDO_TUIWANAKU_fin.jpg',
+        alt: 'alt text',
+        width: 1772,
+        height: 1156,
+      },
+      {
+        id: 2,
+        path: 'home/08_c_FONDO_maderas_belize_FIN.jpg',
+        alt: 'alt text',
+        width: 1772,
+        height: 934,
+      },
+      {
+        id: 3,
+        path: 'home/08_e_FONDO_textiles_FIN.jpg',
+        alt: 'alt text',
+        width: 1772,
+        height: 1036,
+      },
+    ]
+  }
 />
+
 </DivContainer>
