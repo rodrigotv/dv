@@ -1,8 +1,8 @@
 import Link from './Link'
 
-const ReadMore = ({ href }: { href: string }) => {
+const ReadMore = ({ href, linkText = 'Read More' }: { href: string, linkText: string }) => {
   return (
-    <Link href={href} className="home-button">Read More</Link>
+    <Link href={href} className="home-button">{linkText}</Link>
   )
 }
 
