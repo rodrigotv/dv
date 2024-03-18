@@ -131,40 +131,21 @@ h4 {
   padding-top: 1.5rem;
 }
 
-.home #home-product-development .home-product-hero {
-  background-image: url('/static/images/home/08_1_FONDO_dan_artesana_jam_new.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: row;
-  min-height: 556px;
-  padding-left: 0;
-  position: relative;
-}
-
 .home #home-product-development .home-product-hero-text {
   background: #e5c27e;
-  background: linear-gradient(90deg, #e5c27e 0%, #e5c27e 97%, rgba(250,250,250,1) 100%);
-
-  bottom: 0;
+  background: linear-gradient(90deg, #e5c27e 0%, #e5c27e 80%, rgba(250,250,250,0) 100%);
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  padding-right: 3rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  top: 0;
-  width: 50%;
-  @apply pl-4 md:pl-6
+  justify-content: center;
+  @apply relative px-12 py-8 md:pl-6 md:pr-[14%] md:col-[1/2] md:row-[1/2] md:justify-center md:w-[50%] md:leading-normal lg:leading-loose lg:w-[56%];
 }
 
-@media screen and (min-width:768px) {
-  .home #home-product-development .home-product-hero {
-    background-size: contain;
-    background-position: right;
-  }  
+.home #home-product-development .bg-product-hero {
+  @apply relative md:col-[1/2] md:row-[1/2] md:flex justify-end;
 }
+
+/* @media screen and (min-width:768px) {
+} */
 
 .home #home-training .home-training-hero {
   background-image: url('/static/images/home/010_FONDO_dani_c_afganas.jpg');
