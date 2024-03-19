@@ -144,59 +144,23 @@ h4 {
   @apply relative md:col-[1/2] md:row-[1/2] md:flex justify-end;
 }
 
-/* @media screen and (min-width:768px) {
-} */
-
-.home #home-training .home-training-hero {
-  background-image: url('/static/images/home/010_FONDO_dani_c_afganas.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  min-height: 817px;
-  padding-right: 0;
-  position: relative;
-  z-index: 0;
-}
-
-.home #home-training .home-training-hero::after {
-  background: rgba(247, 230, 191, 0.65);
-  bottom: 0;
-  content: '';
-  left: 0;
+.home #home-training .bg-training-hero::before {
   position: absolute;
-  right: 0;
   top: 0;
-  z-index: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(247, 230, 191, 0.7);
+  content: '';
 }
 
 .home #home-training .home-training-hero-text {
   background: rgba(247, 230, 191, 1);
-  background: linear-gradient(to left, rgba(247, 230, 191, 1) 0%, rgba(247, 230, 191, 1) 95%, rgba(250,250,250,0) 100%);
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding-left: 3rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  top: 0;
-  width: 50%;
-  z-index: 2;
-  @apply pr-4 md:pr-6
+  background: linear-gradient(to left, rgba(247, 230, 191, 1) 0%, rgba(247, 230, 191, 1) 45%, rgba(247, 230, 191, 0) 56%, rgba(247, 230, 191, 0) 88%, rgba(247, 230, 191, 1) 100%);
 }
 
 .home #home-training .home-training-hero-text h2 {
   @apply border-none;
-}
-
-@media screen and (min-width:768px) {
-  .home #home-training .home-training-hero {
-    background-size: cover;
-    background-position: left;
-  }  
 }
 
 .home #home-training {
