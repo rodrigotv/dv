@@ -34,7 +34,7 @@ export default function PageLayout({ content, children }: LayoutProps) {
     <SectionContainer>
       <ScrollTopAndComment />
       <article>
-        <div className="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
+        <div>
           <header className="pt-6 xl:pb-6">
             <div className="space-y-1 text-center">
               <div>

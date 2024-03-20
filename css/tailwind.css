@@ -144,19 +144,28 @@ h4 {
   @apply relative md:col-[1/2] md:row-[1/2] md:flex justify-end;
 }
 
+.home #home-product-development .bg-product-hero::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, #e5c27e 0%, rgba(255, 255, 255, 0) 20%);
+  content: '';
+}
+
 .home #home-training .bg-training-hero::before {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(247, 230, 191, 0.7);
+  background: linear-gradient(to bottom, rgba(247, 230, 191, 0.7) 0%, rgba(247, 230, 191, 0.7) 90%, rgba(247, 230, 191, 1) 100%);
   content: '';
 }
 
 .home #home-training .home-training-hero-text {
   background: rgba(247, 230, 191, 1);
-  background: linear-gradient(to left, rgba(247, 230, 191, 1) 0%, rgba(247, 230, 191, 1) 45%, rgba(247, 230, 191, 0) 56%, rgba(247, 230, 191, 0) 88%, rgba(247, 230, 191, 1) 100%);
 }
 
 .home #home-training .home-training-hero-text h2 {
@@ -188,35 +197,70 @@ h4 {
   text-align: justify;
 }
 
-.home #home-consulting .home-consulting-hero {
-  background-image: url('/static/images/home/2_FOTO_FINAL_3_CLA fin.jpg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  min-height: 567px;
-  padding-left: 0;
-  position: relative;
+.home #home-consulting .bg-consulting-hero::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.75) 90%, rgba(255, 255, 255, 1) 100%);
+  content: '';
 }
 
 .home #home-consulting .home-consulting-hero-text {
-  background: #f6f3e4;
-  background: linear-gradient(90deg, #f6f3e4  0%, #f6f3e4 5%, rgba(250,250,250,0) 100%);
-  bottom: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  padding-left: 3rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  top: 0;
-  width: 50%;
-  z-index: 2;
-  @apply pr-4 md:pr-6
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 1);
 }
 
 #home-consulting {
   margin-bottom: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .home #home-product-development .bg-product-hero::before {
+    display: none;
+  }
+  .home #home-training .home-training-hero-text {
+    background: linear-gradient(to left, rgba(247, 230, 191, 1) 0%, rgba(247, 230, 191, 1) 45%, rgba(247, 230, 191, 0) 56%, rgba(247, 230, 191, 0) 88%, rgba(247, 230, 191, 1) 100%);
+  }
+  .home #home-training .bg-training-hero::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(247, 230, 191, 0.7);
+    content: '';
+  }    
+
+  .home #home-consulting .home-consulting-hero-text {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 82%, rgba(255, 255, 255, 1) 98%);
+  }
+  .home #home-consulting .bg-consulting-hero::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.75) 90%, rgba(255, 255, 255, 1) 100%);
+    content: '';
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .home #home-consulting .home-consulting-hero-text {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 38%, rgba(255, 255, 255, 0) 44%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 1) 99%);
+  }
+  .home #home-consulting .bg-consulting-hero::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.75) 90%, rgba(255, 255, 255, 1) 100%);
+    content: '';
+  }
 }
