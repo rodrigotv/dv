@@ -169,7 +169,11 @@ h4 {
 }
 
 .home #home-training .home-training-hero-text h2 {
-  @apply border-none;
+  @apply border-none text-dvText;
+}
+
+.home #home-training .home-training-hero-text h3 {
+  @apply text-dvOrangeGold1;
 }
 
 .home #home-training {
