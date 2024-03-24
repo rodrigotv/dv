@@ -1,8 +1,6 @@
 import 'css/tailwind.css'
-import 'pliny/search/algolia.css'
 import { Open_Sans, Crimson_Pro } from 'next/font/google'
 import { Analytics, AnalyticsConfig } from 'pliny/analytics'
-import { SearchProvider, SearchConfig } from 'pliny/search'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import siteMetadata from '@/data/siteMetadata'
@@ -81,10 +79,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProviders>
           <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
             <div className='font-sans'>
-              <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
                 <Header />
                 <main id="site-content" className="mb-auto pt-16 sm:pt-20 md:pt-28 pb-0">{children}</main>
-              </SearchProvider>
               <Footer />
             </div>
         </ThemeProviders>
