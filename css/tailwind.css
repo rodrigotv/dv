@@ -41,8 +41,7 @@ input:-webkit-autofill:focus {
 
 #site-content p, 
 #site-content li {
-  margin-bottom: 1.5rem;
-  text-align: justify;
+  @apply mb-6 text-left min-[1070px]:text-justify
 }
 
 .light #site-content a {
