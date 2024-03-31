@@ -8,6 +8,7 @@ import DivContainer from './DivContainer'
 import Gallery from './Gallery'
 import ReadMore from './ReadMore'
 import StatBox from './StatBox'
+import ConsultingContactForm from './consulting-contact-form'
 
 export const components: MDXComponents = {
   Image,
@@ -18,5 +19,6 @@ export const components: MDXComponents = {
   DivContainer,
   Gallery,
   ReadMore,
-  StatBox
+  StatBox,
+  ConsultingContactForm
 }

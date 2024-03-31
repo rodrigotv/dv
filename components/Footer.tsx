@@ -2,8 +2,10 @@ import Link from './Link'
 import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
 import DivContainer from './DivContainer'
+// import footerContactForm from './footer-contact-form'
 
 export default function Footer() {
+  // footerContactForm()
   return (
     <footer id="site-footer" className="w-full bg-gradient-to-l from-dvFooterRight to-dvFooterLeft m-0 py-4 px-0 sm:py-5">
       <DivContainer classAddition='bg-footer bg-contain bg-no-repeat bg-right text-gray-100'>

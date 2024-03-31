@@ -1,10 +1,8 @@
-import Link from '@/components/Link'
-import Tag from '@/components/Tag'
-import siteMetadata from '@/data/siteMetadata'
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import SectionContainer from '@/components/SectionContainer'
 import { Pages, allPages } from 'contentlayer/generated'
-import { components } from '@/components/MDXComponents' 
+import { components } from '@/components/MDXComponents'
+// import homeAnimations from '@/components/home-animations'
 
 export default function Page({ params }: { params: { slug: string[] } }) {
   const _1_HomeAbout = allPages.find((p) => p.slug === '1_home_about') as Pages
@@ -13,6 +11,8 @@ export default function Page({ params }: { params: { slug: string[] } }) {
   const _4_HomeTrainingPrograms = allPages.find((p) => p.slug === '4_home_training_programs') as Pages
   const _5_HomeProjects = allPages.find((p) => p.slug === '5_home_projects') as Pages
   const _6_HomeConsulting = allPages.find((p) => p.slug === '6_home_consulting') as Pages
+
+  // homeAnimations()
 
   return (
     <>
