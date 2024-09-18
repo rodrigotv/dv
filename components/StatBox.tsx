@@ -17,7 +17,7 @@ const StatBox = () => {
         />
       </div>
       <div className="max-w-[481px] flex flex-col justify-center aspect-square text-dvBlue1 dark:text-gray-100 overflow-hidden md:order-2 lg:order-none">
-        <span className="block w-full text-[64px] lg:text-[40px]">25</span> years of experience in the Handcraft Sector
+        <span className="block w-full text-[64px] lg:text-[40px]">27</span> years of experience in the Handcraft Sector
       </div>
       <div className="max-w-[481px] aspect-square overflow-hidden md:order-4 lg:order-none">
         <Image
