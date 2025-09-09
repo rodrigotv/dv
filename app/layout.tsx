@@ -1,6 +1,5 @@
-import 'css/tailwind.css'
+import './globals.css'
 import { Open_Sans, Crimson_Pro } from 'next/font/google'
-import { Analytics, AnalyticsConfig } from 'pliny/analytics'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import siteMetadata from '@/data/siteMetadata'
@@ -77,12 +76,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <body className="bg-white text-dvText antialiased dark:bg-dvText dark:text-white text-base sm:text-sm md:text-md">
         <ThemeProviders>
-          <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
-            <div className='font-sans'>
-                <Header />
-                <main id="site-content" className="mb-auto pt-16 sm:pt-20 md:pt-28 pb-0">{children}</main>
-              <Footer />
-            </div>
+          <div className='font-sans'>
+            <Header />
+            <main id="site-content" className="mb-auto pt-16 sm:pt-20 md:pt-28 pb-0">{children}</main>
+            <Footer />
+          </div>
         </ThemeProviders>
       </body>
     </html>

@@ -7,18 +7,18 @@ const siteMetadata = {
   language: 'en-us',
   theme: 'light', // system, dark or light
   siteUrl: 'https://danielaviscarras.com',
-  siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
-  siteLogo: '/static/images/logo.png',
-  socialBanner: '/static/images/twitter-card.png',
-  mastodon: 'https://mastodon.social/@mastodonuser',
+  // siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
+  // siteLogo: '/static/images/logo.png',
+  // socialBanner: '/static/images/twitter-card.png',
+  // mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'dviscarra@gmail.com',
-  github: 'https://github.com',
-  twitter: 'https://twitter.com/Twitter',
-  facebook: 'https://facebook.com',
-  youtube: 'https://youtube.com',
+  // github: 'https://github.com',
+  // twitter: 'https://twitter.com/Twitter',
+  // facebook: 'https://facebook.com',
+  // youtube: 'https://youtube.com',
   linkedin: 'https://www.linkedin.com/in/daniela-viscarra-s-23107439',
-  threads: 'https://www.threads.net',
-  instagram: 'https://www.instagram.com',
+  // threads: 'https://www.threads.net',
+  // instagram: 'https://www.instagram.com',
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
@@ -38,9 +38,9 @@ const siteMetadata = {
     // posthogAnalytics: {
     //   posthogProjectApiKey: '', // e.g. 123e4567-e89b-12d3-a456-426614174000
     // },
-    googleAnalytics: {
-      googleAnalyticsId: '', // e.g. G-XXXXXXX
-    },
+    // googleAnalytics: {
+    //   googleAnalyticsId: '', // e.g. G-XXXXXXX
+    // },
   },
   // newsletter: {
   //   // supports mailchimp, buttondown, convertkit, klaviyo, revue, emailoctopus

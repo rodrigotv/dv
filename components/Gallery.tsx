@@ -27,7 +27,7 @@ const Gallery = ( { grid, pictures }: { grid: Grid, pictures: Pictures[] }) => {
     <div className={`gallery-container mx-auto grid ${className}`}>
       {
         pictures.map(pic => {
-          const {id, path, alt, width, height, caption, className=''} = pic
+          const {path, alt, width, height, caption, className=''} = pic
           const url = `${baseUrl}${path}`
           const pathParts = path.replace(/\/|\./g, ' ').split(' ')
           const key = pathParts[pathParts.length - 2]

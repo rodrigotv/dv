@@ -1,40 +1,81 @@
-import { MDXLayoutRenderer } from 'pliny/mdx-components'
+import { promises as fs } from 'fs';
+import path from 'path';
+import { compileMDX } from 'next-mdx-remote/rsc'
+
 import SectionContainer from '@/components/SectionContainer'
-import { Pages, allPages } from 'contentlayer/generated'
-import { components } from '@/components/MDXComponents'
-// import homeAnimations from '@/components/home-animations'
+import DivContainer from '@/components/DivContainer';
+import Gallery from '@/components/Gallery';
+import StatBox from '@/components/StatBox';
+import ReadMore from '@/components/ReadMore';
+import Image from '@/components/Image';
 
-export default function Page({ params }: { params: { slug: string[] } }) {
-  const _1_HomeAbout = allPages.find((p) => p.slug === '1_home_about') as Pages
-  const _2_HomeProductDevelopment = allPages.find((p) => p.slug === '2_home_product_development') as Pages
-  const _3_HomeBusinessDevelopment = allPages.find((p) => p.slug === '3_home_business_development') as Pages
-  const _4_HomeTrainingPrograms = allPages.find((p) => p.slug === '4_home_training_programs') as Pages
-  const _5_HomeProjects = allPages.find((p) => p.slug === '5_home_projects') as Pages
-  const _6_HomeConsulting = allPages.find((p) => p.slug === '6_home_consulting') as Pages
+export default async function Page() {
+  const pagesDir = path.join(process.cwd(), 'data/pages')
+  const filenames = await fs.readdir(pagesDir)
+  
+  interface Frontmatter {
+    title: string;
+    date: string;
+    id: string;
+  }
+  
+  // Filtrar solo archivos .mdx que empiecen con número y excluir archivos ocultos
+  const mdxFiles = filenames.filter(filename => 
+    filename.endsWith('.mdx') && 
+    !filename.startsWith('.') &&
+    !filename.startsWith('_') && // También excluir archivos que empiecen con _
+    /^\d/.test(filename) // Solo archivos que empiecen con un número
+  )
+  
+  const sections = await Promise.all(
+    mdxFiles.map(async (filename) => {
+      const filePath = path.join(pagesDir, filename)
+      
+      try {
+        // Verificar que sea un archivo
+        const stats = await fs.stat(filePath)
+        if (!stats.isFile()) {
+          console.log(`Skipping non-file: ${filename}`)
+          return null
+        }
+        
+        const content = await fs.readFile(filePath, 'utf-8');
+        const data = await compileMDX<Frontmatter>({
+          source: content,
+          options: {
+            parseFrontmatter: true
+          },
+          components: {
+            DivContainer,
+            Gallery,
+            ReadMore,
+            StatBox,
+            Image,
+          }
+        })
 
-  // homeAnimations()
-
+        return (
+          <SectionContainer key={data.frontmatter.id} id={data.frontmatter.id}>
+            {data.content}
+          </SectionContainer>
+        )
+        
+      } catch (error) {
+        console.error(`Error processing file ${filename}:`, error)
+        return null
+      }
+    })
+  )
+  
+  // Filtrar elementos null (archivos que fallaron al procesarse)
+  const validSections = sections.filter(Boolean)
+    
   return (
     <>
     <div className="home">
-      <SectionContainer id="home-about">
-        <MDXLayoutRenderer components={components}  code={_1_HomeAbout.body.code} toc={_1_HomeAbout.toc} />
-      </SectionContainer>
-      <SectionContainer id="home-product-development">
-        <MDXLayoutRenderer components={components}  code={_2_HomeProductDevelopment.body.code} toc={_2_HomeProductDevelopment.toc} />
-      </SectionContainer>
-      <SectionContainer id="home-business-development">
-        <MDXLayoutRenderer components={components}  code={_3_HomeBusinessDevelopment.body.code} toc={_3_HomeBusinessDevelopment.toc} />
-      </SectionContainer>
-      <SectionContainer id="home-training">
-        <MDXLayoutRenderer components={components}  code={_4_HomeTrainingPrograms.body.code} toc={_4_HomeTrainingPrograms.toc} />
-      </SectionContainer>
-      <SectionContainer id="home-projects">
-        <MDXLayoutRenderer components={components}  code={_5_HomeProjects.body.code} toc={_5_HomeProjects.toc} />
-      </SectionContainer>
-      <SectionContainer id="home-consulting">
-        <MDXLayoutRenderer components={components}  code={_6_HomeConsulting.body.code} toc={_6_HomeConsulting.toc} />
-      </SectionContainer>
+      {
+        validSections.map(item => item)
+      }
     </div>
     </>
   )
