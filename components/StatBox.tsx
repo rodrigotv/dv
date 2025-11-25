@@ -17,7 +17,7 @@ const StatBox = () => {
         />
       </div>
       <div className="max-w-[481px] flex flex-col justify-center aspect-square text-dvBlue1 dark:text-gray-100 overflow-hidden md:order-2 lg:order-none">
-        <span className="block w-full text-[64px] lg:text-[40px]">27</span> years of experience in the Handcraft Sector
+        <span className="block w-full text-[64px] lg:text-[40px]">30</span> years of experience in the Handcraft Sector
       </div>
       <div className="max-w-[481px] aspect-square overflow-hidden md:order-4 lg:order-none">
         <Image
@@ -27,7 +27,7 @@ const StatBox = () => {
         />
       </div>
       <div className="max-w-[481px] flex flex-col justify-center aspect-square text-dvBlue1 dark:text-gray-100 overflow-hidden md:order-3 lg:order-none">
-        Nearly <span className="block w-full text-[64px] lg:text-[40px]">3,500</span> artisans benefited from her designs and sales model
+        Nearly <span className="block w-full text-[64px] lg:text-[40px]">3,600</span> artisans benefited from her designs and sales model
       </div>
       <div className="max-w-[481px] aspect-square overflow-hidden md:order-5 lg:order-none">
         <Image
@@ -37,7 +37,7 @@ const StatBox = () => {
         />
       </div>
       <div className="max-w-[481px] flex flex-col justify-center aspect-square text-dvPurple4 dark:text-gray-100 overflow-hidden md:order-6 lg:order-none">
-        Nearly <span className="block w-full text-[64px] lg:text-[40px]">2,200</span> artisans and program implementers trained
+        Nearly <span className="block w-full text-[64px] lg:text-[40px]">2,300</span> artisans and program implementers trained
       </div>
       <div className="max-w-[481px] aspect-square overflow-hidden md:order-8 lg:order-none">
         <Image
